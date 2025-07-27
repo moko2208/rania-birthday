@@ -3,13 +3,60 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Happy Birthday Rania</title>
+  <title>Queen's Birthday</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1 class="birthday-text">HAPPY BIRTHDAY</h1>
-    <p class="name">Rania Mardini</p>
+  <div class="container" id="entry-page">
+    <div class="entry-box">
+      <h1>This only for the Queen's birthday</h1>
+      <p>Please enter your birthdate to continue...</p>
+      <input type="password" id="birthInput" placeholder="Enter your birthdate" />
+      <button onclick="checkBirthdate()">Enter</button>
+    </div>
   </div>
+
+  <div class="hidden" id="main-content">
+    <audio autoplay loop>
+      <source src="birthday.mp3" type="audio/mpeg" />
+    </audio>
+    <div class="fireworks"></div>
+    <div class="card">
+      <img src="rania.jpg" alt="Rania" class="rania-img" />
+      <div class="message">
+        <h2>Happy Birthday, Rania!</h2>
+        <p>
+          May your day be filled with love, laughter, and all the beautiful things you deserve.<br />
+          You’re not just special today — you’re special every day.<br />
+          Here’s to more memories, more smiles, and endless happiness. 💖🎂✨
+        </p>
+        <img src="cake.png" alt="Birthday Cake" class="cake-img" />
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function checkBirthdate() {
+      const input = document.getElementById("birthInput").value;
+      if (input === "17899") {
+        document.getElementById("entry-page").style.display = "none";
+        document.getElementById("main-content").classList.remove("hidden");
+        startFireworks();
+      } else {
+        alert("Wrong date! Try again.");
+      }
+    }
+
+    function startFireworks() {
+      const container = document.querySelector(".fireworks");
+      for (let i = 0; i < 20; i++) {
+        const fw = document.createElement("div");
+        fw.className = "firework";
+        fw.style.left = Math.random() * 100 + "%";
+        fw.style.animationDelay = Math.random() * 3 + "s";
+        container.appendChild(fw);
+      }
+    }
+  </script>
 </body>
 </html>
