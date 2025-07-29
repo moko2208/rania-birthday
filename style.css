@@ -1,96 +1,69 @@
 body {
   margin: 0;
-  font-family: "Segoe UI", sans-serif;
-  background: linear-gradient(to right, #ffe0ec, #ffe8f0);
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1b1b1b;
+  color: #fff;
   text-align: center;
-}
-
-.entry-box {
-  background-color: white;
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.1);
-}
-
-.entry-box input {
-  padding: 10px;
-  margin-top: 20px;
-  width: 200px;
-}
-
-.entry-box button {
-  padding: 10px 20px;
-  margin-top: 10px;
-  background-color: pink;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-.hidden {
-  display: none;
 }
 
 .card {
-  padding: 20px;
-  max-width: 700px;
-  margin: auto;
-  background: white;
-  border-radius: 20px;
-  box-shadow: 0 0 30px rgba(0,0,0,0.2);
-  text-align: center;
+  margin-top: 20vh;
+  background: #292929;
+  padding: 25px;
+  border-radius: 12px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 10px #ff69b4;
+}
+
+input {
+  padding: 10px;
+  width: 80%;
+  border-radius: 6px;
+  border: none;
+  margin-top: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.message {
   margin-top: 40px;
-  position: relative;
+  animation: fadeIn 1s ease-in-out;
 }
 
-.rania-img {
-  max-width: 200px;
-  border-radius: 100%;
+.queen-img {
+  max-width: 220px;
+  border-radius: 20px;
   margin-bottom: 20px;
-}
-
-.message h2 {
-  color: #d63384;
-  margin-bottom: 10px;
-}
-
-.message p {
-  font-size: 18px;
-  color: #444;
-}
-
-.cake-img {
-  width: 100px;
-  margin-top: 20px;
+  box-shadow: 0 0 15px #ff69b4;
 }
 
 .fireworks {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 0;
+  font-size: 40px;
+  margin-top: 20px;
 }
 
-.firework {
-  width: 10px;
-  height: 10px;
-  background: gold;
-  border-radius: 50%;
-  position: absolute;
-  animation: explode 1.5s ease-out infinite;
+.cake {
+  font-size: 60px;
+  margin-top: 30px;
+  animation: bounce 1s infinite;
 }
 
-@keyframes explode {
-  0% { transform: translateY(0) scale(1); opacity: 1; }
-  100% { transform: translateY(-300px) scale(0.5); opacity: 0; }
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
