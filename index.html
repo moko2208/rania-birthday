@@ -1,35 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Queen Birthday</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width">
+  <title>Queen Birthday Matrix Style</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <div id="gate">
-    <div class="card">
-      <h2>This only for the Queen's birthday</h2>
-      <p>Please enter your birthdate to continue...</p>
-      <input type="password" id="birthdayInput" placeholder="17899" />
-      <button onclick="checkBirthday()">Enter</button>
+  <div id="screen">
+    <div id="code"></div>
+    <div id="message" style="display:none;">
+      <h1>Happy Birthday Queen 🎂</h1>
     </div>
   </div>
-
-  <div id="mainContent" style="display: none;">
-    <div class="message">
-      <img src="queen.jpg" alt="Queen" class="queen-img" />
-      <h1>Happy Birthday, Rania!</h1>
-      <p>May your day be filled with love, laughter, and all the beautiful things you deserve.</p>
-      <p>You’re not just special today — you’re special every day.</p>
-      <p>Here’s to more memories, more smiles, and endless happiness. 💖🎂✨</p>
-    </div>
-    <div class="fireworks">🎆🎇✨</div>
-    <div class="cake">🎂</div>
-    <audio autoplay loop>
-      <source src="music.mp3" type="audio/mpeg" />
-    </audio>
-  </div>
+  <audio src="assets/music.mp3" autoplay loop></audio>
+  <script src="script.js"></script>
 </body>
 </html>
